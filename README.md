@@ -2,7 +2,7 @@
 ### Link http://54.248.52.136:3000/
 </br>
 
-## Check out the most Visited tourist attractions in Taipei!
+## Check out the most visited tourist attractions in Taipei!
 ![cover](./README-picture/cover.jpg)
 </br>
 
