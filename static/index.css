@@ -1,0 +1,950 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:1920px) {
+    .taipei-day-trip {
+        width: 100vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .windowBackground {
+        position: fixed;
+        z-index: 2;
+        width: 100vw;
+        background-color: black;
+        opacity: 0.25;
+        display: none;
+        min-height: 100%;
+        height: 100vh;
+    }
+
+    .windowOutside {
+        position: relative;
+        display: none;
+        justify-content: center;
+    }
+
+    .windowPage {
+        position: fixed;
+        z-index: 3;
+        width: 340px;
+        height: 275px;
+        background-color: white;
+        margin-top: 80px;
+        border-radius: 6px;
+    }
+
+    .window-inside {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+    }
+
+    .window-inside-top {
+        width: 340px;
+        height: 10px;
+        background: linear-gradient(90deg, #66AABB, #337788);
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .window-inside-closebutton {
+        position: absolute;
+        z-index: 4;
+        padding: 0px;
+        border: 0px;
+        background-color: white;
+        left: calc(100% - 35px);
+        top: 27px;
+        cursor: pointer;
+    }
+
+
+    .window-inside-text-member {
+        display: flex;
+        justify-content: center;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        font-size: 24px;
+        font-weight: 700;
+        width: 310px;
+    }
+
+    .window-inside-input {
+        width: 295px;
+        height: 47px;
+        padding: 0px 0px 0px 15px;
+        border-width: 0px;
+        border: solid 1px #CCCCCC;
+        border-radius: 5px;
+    }
+
+    .window-inside-input-name {
+        display: none;
+        width: 295px;
+        height: 47px;
+        padding: 0px 0px 0px 15px;
+        border-width: 0px;
+        border: solid 1px #CCCCCC;
+        border-radius: 5px;
+    }
+
+    .window-inside-login {
+        width: 310px;
+        height: 47px;
+        background-color: #448899;
+        padding: 0px;
+        border-width: 0px;
+        border-radius: 5px;
+        color: white;
+        font-family: "Noto Sans TC";
+        font-size: 19px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .window-inside-email-repeat {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-signup-success {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: #1cdc2c;
+        height: 17px;
+    }
+
+    .window-inside-signup-fail {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-login-fail {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-signup {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height: 47px;
+        background-color: #448899;
+        padding: 0px;
+        border-width: 0px;
+        border-radius: 5px;
+        color: white;
+        font-family: "Noto Sans TC";
+        font-size: 19px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .window-inside-text-signup {
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        border-width: 0px;
+        padding: 0px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 500;
+        color: #666666;
+        cursor: pointer;
+    }
+
+    .window-inside-text-signin {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        border-width: 0px;
+        padding: 0px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 500;
+        color: #666666;
+        cursor: pointer;
+    }
+
+    .taipei101-input-outside {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        top: 242px;
+    }
+
+    .taipei101-input-width {
+        width: 1180px;
+    }
+
+    .dialog {
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dialogOutside {
+        width: 400px;
+        height: 128px;
+        margin-top: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px #AABBCC;
+        display: none;
+        background-color: white;
+    }
+
+    .dialog-right {
+        width: 60px;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+
+    .taipei101-input-category {
+        display: flex;
+    }
+
+    .flexbox {
+        background-color: white;
+        color: black;
+        border: 0px;
+        width: 90px;
+        height: 20px;
+        margin: 11px 15px 11px 15px;
+        font-family: "Noto Sans TC";
+        font-weight: 500;
+        line-height: 20.27px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .closeDialog {
+        position: absolute;
+        z-index: 5;
+        width: 100vw;
+    }
+
+    .sectionTop-Outside {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .sectionTop {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+        cursor: pointer;
+        border-width: 0px;
+        padding: 0px;
+        background-color: white;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+    .sectionTopBooking {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .sectionTopLogin {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .sectionTopLogout {
+        margin: 0px 10px 0px 10px;
+        display: none;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .taipei101 {
+        height: 480px;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .taipei101-text {
+        height: 0px;
+        width: 1180px;
+        z-index: 1;
+        color: #F8F8F8;
+    }
+
+    .taipei101-text-1 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 28px;
+        line-height: 24px;
+        margin-top: 85px;
+        font-weight: 700;
+        user-select: none;
+    }
+
+    .taipei101-text-2 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        margin-top: 15px;
+        font-weight: 700;
+        user-select: none;
+    }
+
+    .taipei101-input-button {
+        display: flex;
+    }
+
+    .taipei101-input {
+        width: 370px;
+        height: 46px;
+        border: 0px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 13.3px;
+        display: flex;
+        align-items: center;
+        color: #757575;
+        font-family: "Noto Sans TC";
+        border-radius: 5px 0px 0px 5px;
+        padding: 0px 15px 0px 15px;
+    }
+
+    ::placeholder {
+        color: #757575;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 13.3px;
+        display: flex;
+        align-items: center;
+    }
+
+    .taipei101-button {
+        width: 60px;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        background-color: #448899;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+    }
+
+    .taipei101-image {
+        display: flex;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+    }
+
+    .taipei101Bottom {
+        width: 100vw;
+        height: 160px;
+        top: 320px;
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+    .attractions {
+        display: flex;
+        justify-content: center;
+        margin-top: -105px;
+    }
+
+    .flex-container2 {
+        display: flex;
+        width: 1280px;
+        z-index: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flexbox2 {
+        height: 242px;
+        width: 270px;
+        margin: 0px 15px 30px 15px;
+        background-color: white;
+        border: solid 0.5px #DCDCDC;
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+    }
+
+    .flexbox-image {
+        width: 100%;
+        overflow: hidden;
+        height: 197px;
+        object-fit: cover;
+        z-index: 0;
+        display: block;
+    }
+
+    .attractionsBottom {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        z-index: 0;
+        color: #757575;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 13.3px;
+
+    }
+
+    .attractionsBottomMRT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        margin: 0px 10px 0px 10px;
+        font-weight: 500;
+    }
+
+    .attractionsBottomCAT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        margin: 0px 10px 0px 10px;
+        font-weight: 500;
+    }
+
+    .attractionsMiddle {
+        width: 100%;
+        height: 40px;
+        margin-top: -85px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        background-color: black;
+        opacity: 0.6;
+        padding-left: 0px;
+    }
+
+    .attractionsMiddleText {
+        padding-left: 10px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 104px;
+        background-color: #757575;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        font-weight: 700;
+    }
+
+
+}
+
+@media (max-width:1280px) {
+    .taipei101-input-category {
+        display: flex;
+    }
+
+    .taipei101-input-width {
+        width: 92vw;
+    }
+
+    .sectionTop {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 93.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+
+    .sectionTopBooking {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .sectionTopLogin {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .sectionTopLogout {
+        margin: 0px 10px 0px 10px;
+        display: none;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .taipei101 {
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .taipei101-text {
+        height: 0px;
+        width: 92vw;
+        z-index: 1;
+        color: #F8F8F8;
+    }
+
+    .taipei101-text-1 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 28px;
+        line-height: 24px;
+        margin-top: 85px;
+        font-weight: 700;
+    }
+
+    .taipei101-text-2 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        margin-top: 15px;
+        font-weight: 700;
+    }
+
+
+
+    .taipei101-image {
+        display: flex;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        width: 1280px;
+        height: 320px;
+    }
+
+
+    .attractions {
+        display: flex;
+        justify-content: center;
+        margin-top: -105px;
+    }
+
+    .flex-container2 {
+        display: flex;
+        width: 100vw;
+        z-index: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flexbox2 {
+        min-height: 280px;
+        width: 45%;
+        margin: 0px 15px 30px 15px;
+        border: solid 0.5px #DCDCDC;
+        position: relative;
+        z-index: 1;
+    }
+
+    .flexbox-image {
+        width: 100%;
+        overflow: hidden;
+        height: 235px;
+        object-fit: cover;
+        z-index: 0;
+        display: block;
+    }
+
+    .attractionsBottom {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .attractionsBottomMRT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+    }
+
+    .attractionsBottomCAT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+    }
+
+
+    .attractionsMiddle {
+        width: 100%;
+        height: 40px;
+        margin-top: -85px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        background-color: black;
+        opacity: 0.6;
+        padding-left: 0px;
+
+    }
+
+    .attractionsMiddleText {
+        padding-left: 10px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        color: #fff;
+        font-weight: 700;
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+
+    .dialog {
+        width: 240px;
+    }
+
+    .dialogOutside {
+        width: 400px;
+        height: 210px;
+        background-color: black;
+        margin-top: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px #AABBCC;
+        display: none;
+        background-color: white;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .sectionTop {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 92vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+
+    .sectionTopBooking {
+        margin: 0px 10px 0px 10px;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+
+    }
+
+    .taipei101 {
+        height: 480px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .taipei101-text {
+        height: 0px;
+        width: 93.5vw;
+        z-index: 1;
+        color: #F8F8F8;
+    }
+
+    .taipei101-text-1 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 28px;
+        line-height: 24px;
+        margin-top: 85px;
+        font-weight: 700;
+    }
+
+    .taipei101-text-2 {
+        z-index: 1;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        margin-top: 15px;
+        font-weight: 700;
+    }
+
+
+    .taipei101-image {
+        display: flex;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        width: 1280px;
+        height: 320px;
+    }
+
+
+    .attractions {
+        display: flex;
+        justify-content: center;
+        margin-top: -105px;
+    }
+
+    .flex-container2 {
+        display: flex;
+        width: 100vw;
+        z-index: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flexbox2 {
+        min-height: 280px;
+        width: 90vw;
+        margin: 0px 15px 30px 15px;
+        border: solid 0.5px #DCDCDC;
+        position: relative;
+        z-index: 1;
+    }
+
+    .flexbox-image {
+        width: 100%;
+        overflow: hidden;
+        height: 235px;
+        object-fit: cover;
+        z-index: 0;
+        display: block;
+    }
+
+    .attractionsBottom {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .attractionsBottomMRT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+    }
+
+    .attractionsBottomCAT {
+        display: flex;
+        align-items: center;
+        height: 45px;
+    }
+
+
+    .attractionsMiddle {
+        width: 100%;
+        height: 40px;
+        margin-top: -85px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        background-color: black;
+        opacity: 0.6;
+        padding-left: 0px;
+
+    }
+
+    .attractionsMiddleText {
+        padding-left: 10px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        color: #fff;
+        font-weight: 700;
+
+    }
+
+
+}

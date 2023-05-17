@@ -1,0 +1,1117 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:1920px) {
+    .taipei-day-trip {
+        width: 100vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .windowBackground {
+        position: fixed;
+        z-index: 2;
+        width: 100vw;
+        background-color: black;
+        opacity: 0.25;
+        display: none;
+        min-height: 100%;
+        height: 100vh;
+    }
+
+    .windowOutside {
+        position: relative;
+        display: none;
+        justify-content: center;
+    }
+
+    .windowPage {
+        position: fixed;
+        z-index: 3;
+        width: 340px;
+        height: 275px;
+        background-color: white;
+        margin-top: 80px;
+        border-radius: 6px;
+    }
+
+    .window-inside {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+    }
+
+    .window-inside-top {
+        width: 340px;
+        height: 10px;
+        background: linear-gradient(90deg, #66AABB, #337788);
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .window-inside-closebutton {
+        position: absolute;
+        z-index: 4;
+        padding: 0px;
+        border: 0px;
+        background-color: white;
+        left: calc(100% - 35px);
+        top: 27px;
+        cursor: pointer;
+    }
+
+
+    .window-inside-text-member {
+        display: flex;
+        justify-content: center;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        font-size: 24px;
+        font-weight: 700;
+        width: 310px;
+    }
+
+    .window-inside-input {
+        width: 295px;
+        height: 47px;
+        padding: 0px 0px 0px 15px;
+        border-width: 0px;
+        border: solid 1px #CCCCCC;
+        border-radius: 5px;
+    }
+
+    .window-inside-input-name {
+        display: none;
+        width: 295px;
+        height: 47px;
+        padding: 0px 0px 0px 15px;
+        border-width: 0px;
+        border: solid 1px #CCCCCC;
+        border-radius: 5px;
+    }
+
+    .window-inside-login {
+        width: 310px;
+        height: 47px;
+        background-color: #448899;
+        padding: 0px;
+        border-width: 0px;
+        border-radius: 5px;
+        color: white;
+        font-family: "Noto Sans TC";
+        font-size: 19px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .window-inside-email-repeat {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-signup-success {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: #1cdc2c;
+        height: 17px;
+    }
+
+    .window-inside-signup-fail {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-login-fail {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: red;
+        height: 17px;
+    }
+
+    .window-inside-signup {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height: 47px;
+        background-color: #448899;
+        padding: 0px;
+        border-width: 0px;
+        border-radius: 5px;
+        color: white;
+        font-family: "Noto Sans TC";
+        font-size: 19px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .window-inside-text-signup {
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        border-width: 0px;
+        padding: 0px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 500;
+        color: #666666;
+        cursor: pointer;
+    }
+
+    .window-inside-text-signin {
+        display: none;
+        justify-content: center;
+        width: 310px;
+        background-color: white;
+        border-width: 0px;
+        padding: 0px;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-weight: 500;
+        color: #666666;
+        cursor: pointer;
+    }
+
+    .sectionTop-Outside {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .sectionTop {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+        cursor: pointer;
+        border-width: 0px;
+        padding: 0px;
+        background-color: white;
+        text-decoration: none;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+    .sectionTopBooking {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .sectionTopLogin {
+        margin: 0px 10px 0px 10px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+    .sectionTopLogout {
+        margin: 0px 10px 0px 10px;
+        display: none;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: white;
+        border: 0px;
+        padding: 0px;
+        cursor: pointer;
+    }
+
+
+
+    .attraction {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 37px;
+        width: 100vw;
+    }
+
+    .attraction-width {
+        width: 1170px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .attraction-image {
+        width: 540px;
+        height: 406px;
+        background-color: black;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 20;
+        overflow: hidden;
+    }
+
+    .attraction-image1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        display: flex;
+    }
+
+
+    .attraction-button-left {
+        cursor: pointer;
+        position: absolute;
+        z-index: 19;
+        padding: 0px;
+        margin: 0px 0px 0px 10px;
+        background-color: transparent;
+        border: 0px;
+        opacity: 0.6;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+    .attraction-button-right {
+        cursor: pointer;
+        position: absolute;
+        left: calc(100% - 46px);
+        padding: 0px;
+        background-color: transparent;
+        border: 0px;
+        z-index: 19;
+        opacity: 0.7;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+
+    .attraction-dot-outside {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-self: end;
+        display: flex;
+    }
+
+    .attraction-dot {
+        position: relative;
+        width: 12px;
+        margin: 0px 6px 25px 6px;
+    }
+
+
+    .attraction-dot1 {
+        cursor: pointer;
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        z-index: 20;
+        padding: 0px;
+        border-width: 0px;
+        width: 12px;
+        height: 12px;
+        border: 1px;
+        border-color: white;
+        border-radius: 6px;
+        border-radius: 50%;
+        background-color: white;
+        transition: 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: black;
+    }
+
+    /* 不能用color會顯示不出來 */
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    .attraction-right {
+        width: 600px;
+        margin-left: 30px;
+        display: block;
+    }
+
+    .attraction-name {
+        height: 104px;
+        font-display: block;
+    }
+
+    .attraction-name1 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .attraction-name2 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 13.3px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .attraction-booking {
+        height: 302px;
+        background-color: #E8E8E8;
+        border-radius: 5px;
+        padding-left: 20px;
+        display: grid;
+        align-items: center;
+    }
+
+    .attraction-booking1 {
+        display: flex;
+        align-items: center;
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 700;
+
+    }
+
+    .attraction-booking2 {
+        display: flex;
+        align-items: center;
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .attraction-booking3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .attraction-booking3-date1 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .attraction-booking3-date2 {
+        border: 0px;
+        width: 193px;
+        height: 35px;
+        margin: -5px 0px -5px 5px;
+        font-size: 16px;
+        cursor: text;
+    }
+
+    .attraction-booking4 {
+        display: flex;
+        align-items: center;
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+    }
+
+    .attraction-booking4-date1 {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+
+    .attraction-booking4-button1 {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        border-width: 0px;
+        width: 18px;
+        height: 18px;
+        margin: 0px 0px 0px 10px;
+        background-color: #448899;
+        border: 1px;
+        border-color: white;
+        border-style: solid;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .attraction-booking4-button2 {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        border-width: 0px;
+        width: 18px;
+        height: 18px;
+        margin: 0px 0px 0px 10px;
+        background-color: white;
+        border: 1px;
+        border-color: white;
+        border-radius: 9px;
+        cursor: pointer;
+    }
+
+    .attraction-booking4-date2 {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-left: 6px;
+    }
+
+
+
+    .attraction-booking5 {
+        display: flex;
+        align-items: center;
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+    }
+
+
+    .attraction-booking5-fee1 {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+
+    .attraction-booking5-fee2 {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .attraction-booking6 {
+        display: flex;
+        align-items: center;
+    }
+
+    .attraction-booking6-button {
+        margin-bottom: 20px;
+        padding: 0px;
+        border-width: 0px;
+        height: 36px;
+        width: 154px;
+        color: white;
+        background-color: #448899;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        font-size: 19px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    .separator-top-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 100vw;
+    }
+
+    .separator-top {
+        margin-top: 0px;
+        height: 1px;
+        background-color: #E8E8E8;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .separator-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 100vw;
+    }
+
+    .separator {
+        margin-top: 37px;
+        height: 1px;
+        background-color: #E8E8E8;
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .attraction-text-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 37px;
+        width: 100vw;
+    }
+
+    .attraction-text {
+        display: block;
+        width: 1180px;
+    }
+
+    .attraction-text-info {
+        display: flex;
+        color: #666666;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.17px;
+        align-items: center;
+    }
+
+
+    .attraction-text-address {
+        display: block;
+        margin-top: 20px;
+        height: 56px;
+        color: #666666;
+    }
+
+    .attraction-text-address1 {
+        display: flex;
+        height: 32px;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        align-items: center;
+        font-size: 16px;
+        line-height: 13.3px;
+    }
+
+    .attraction-text-address2 {
+        display: flex;
+        height: 24px;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        align-items: center;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+    .attraction-text-trans {
+        display: block;
+        margin-top: 20px;
+        color: #666666;
+    }
+
+
+    .attraction-text-trans1 {
+        display: flex;
+        height: 32px;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        align-items: center;
+        font-size: 16px;
+        line-height: 13.3px;
+    }
+
+    .attraction-text-trans2 {
+        display: block;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        align-items: center;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+    .footer {
+        width: 100vw;
+        margin-top: 120px;
+        height: 104px;
+        background-color: #757575;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        font-weight: 700;
+    }
+
+}
+
+@media (max-width:1280px) {
+
+    .sectionTop {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 93.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+
+
+    .attraction {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 37px;
+        width: 100vw;
+    }
+
+    .attraction-width {
+        width: 93.5vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    .attraction-image {
+        height: 406px;
+        background-color: black;
+    }
+
+    .attraction-name {
+        height: 104px;
+    }
+
+    .attraction-name1 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .attraction-name2 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 13.3px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+
+
+    .attraction-booking {
+        height: 302px;
+        background-color: #E8E8E8;
+    }
+
+    .separator-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 100vw;
+
+    }
+
+    .separator {
+        margin-top: 37px;
+        height: 1px;
+        background-color: #E8E8E8;
+        width: 93.5vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .attraction-text-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 37px;
+        margin-bottom: 120px;
+        width: 100vw;
+    }
+
+    .attraction-text {
+        display: block;
+        width: 93.5vw;
+    }
+
+    .attraction-text-info {
+        display: flex;
+    }
+
+
+    .attraction-text-address {
+        display: block;
+        margin-top: 20px;
+        height: 56px;
+    }
+
+    .attraction-text-address1 {
+        display: flex;
+        height: 32px;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        align-items: center;
+        font-size: 16px;
+        line-height: 13.3px;
+    }
+
+    .attraction-text-address2 {
+        display: flex;
+        height: 24px;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        align-items: center;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+    .attraction-text-trans2 {
+        display: block;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 104px;
+        background-color: #757575;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        font-weight: 700;
+    }
+
+}
+
+@media (max-width:900px) {
+
+    .sectionTop {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .sectionTop-space-between {
+        height: 54px;
+        width: 93.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sectionTop-1 {
+        font-size: 30px;
+        font-family: "Noto Sans TC";
+        line-height: 34px;
+        font-weight: bold;
+        color: #448899;
+    }
+
+    .sectionTop-2 {
+        font-size: 20px;
+        display: flex;
+    }
+
+    .sectionTop-2-1 {
+        margin: 0px 10px 0px 10px;
+        position: relative;
+        z-index: 1;
+        color: #666666;
+        font-family: "Noto Sans TC";
+        line-height: 13.3px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .attraction {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 0px;
+        width: 100vw;
+    }
+
+    .attraction-width {
+        background-color: white;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .attraction-image {
+        width: 100vw;
+        height: 350px;
+        background-color: black;
+    }
+
+    .attraction-image1 {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+    }
+
+    .attraction-right {
+        width: 93.5vw;
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .attraction-name {
+        height: 90px;
+        margin-top: 20px;
+    }
+
+    .attraction-name1 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .attraction-name2 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 13.3px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+
+    .attraction-name1 {
+        font-family: "Noto Sans TC";
+        color: #666666;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+
+    }
+
+
+    .attraction-booking {
+        width: 93.5vw;
+        background-color: #E8E8E8;
+    }
+
+    .separator-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        width: 100vw;
+
+    }
+
+    .separator {
+        margin-top: 40px;
+        height: 1px;
+        background-color: #E8E8E8;
+        width: 93.5vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .attraction-text-outside {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 50px;
+        margin-bottom: 120px;
+        width: 100vw;
+    }
+
+    .attraction-text {
+        display: block;
+        width: 93.5vw;
+    }
+
+
+    .attraction-text-info {
+        display: flex;
+    }
+
+
+    .attraction-text-address {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .attraction-text-address1 {
+        display: flex;
+        height: 32px;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        align-items: center;
+        font-size: 16px;
+        line-height: 13.3px;
+    }
+
+    .attraction-text-address2 {
+        display: flex;
+        height: 24px;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        align-items: center;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+    .attraction-text-trans2 {
+        display: block;
+        font-family: "Noto Sans TC";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23.17px;
+    }
+
+
+    .footer {
+        width: 100vw;
+        height: 104px;
+        background-color: #757575;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        line-height: 13.3px;
+        font-weight: 700;
+    }
+}
